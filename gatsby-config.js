@@ -19,6 +19,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sass",
+    "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -33,6 +34,21 @@ module.exports = {
         printRejected: true, // Print removed selectors and processed file names
         develop: false, // Enable while using `gatsby develop`
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `UX/UI Portfolio of Brandon Langer`,
+        short_name: `UX/UI Brandon Langer`,
+        start_url: `/`,
+        description: `Creating empathic designs through modern UX/UI.`,
+        lang: `en`,
+        display: `standalone`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/icon.svg`, // This path is relative to the root of the site.
+      },
+    },
   ],
 }
