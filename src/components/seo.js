@@ -29,6 +29,7 @@ const SEO = ({ title, description, image, article }) => {
 
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
+      <html lang="en" />
       <link rel="icon" href={favicon} />
       <link rel="mask-icon" href={pinnedTab} color="#234e52" />
       <link rel="apple-touch-icon" sizes="180x180" href={touchIcon} />
