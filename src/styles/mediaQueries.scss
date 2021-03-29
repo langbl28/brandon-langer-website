@@ -1,0 +1,36 @@
+/*-------------------------------
+Media Queries
+-------------------------------*/
+/// Wraps content in a media query based on provided breakpoint and direction
+@mixin breakpoint($bpName, $direction: 'up') {
+    // check if breakpoint exists in map
+    @if map-has-key($breakpoints, $bpName) {
+      // get the value from the map
+      $value: map-get($breakpoints, $bpName);
+  
+      // print media query for min- or max-width based on direction
+      @if ($direction == 'up') {
+        @media (min-width: $value) {
+          @content;
+        }
+      } @else if ($direction == 'down') {
+        @media (max-width: $value - 0.02px) {
+          @content;
+        }
+      } @else {
+        // log warning (invalid direction)
+        @warn "Invalid direction: #{$direction}. "
+            + "Try using 'up' or 'down' or leaving blank.";
+      }
+    } @else if ($bpName == 'landscape-phone') {
+      // print media query specifically for landscape phones
+      // (accomodates for limited height, preventing clashes w/ tablet)
+      @media (max-width: 56.25em) and (max-height: 30em) and (orientation: landscape) {
+        @content;
+      }
+    } @else {
+      // log warning (key wasn't found)
+      @warn "Invalid breakpoint: #{$bpName}. "
+          + "Make sure it is defined in the '$breakpoints' map.";
+    }
+  }

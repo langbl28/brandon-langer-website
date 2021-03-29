@@ -1,0 +1,228 @@
+/*-------------------------------
+Typography
+-------------------------------*/
+/// Fonts
+$font-stack: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+/// Font Colors
+$header-color: $grey-800;
+$text-color: $grey-800;
+$link-color: $teal-700;
+$link-color-hover: $teal-900;
+
+/// Font Modular Type Scale
+/// -Used for calculating type sizes
+$type-scale: 1.25; // Major Third
+
+/// Headers
+$header-size-6: 1rem;
+$header-size-5: $header-size-6 * ($type-scale);
+$header-size-4: $header-size-5 * ($type-scale);
+$header-size-3: $header-size-4 * ($type-scale);
+$header-size-2: $header-size-3 * ($type-scale);
+$header-size-1: $header-size-2 * ($type-scale);
+
+/// More Font Sizes
+$font-size-2xs: 0.75em;
+$font-size-xs: 0.8125em;
+$font-size-sm: 0.875em;
+$font-size: 1em;
+$font-size-lg: 1.125em;
+$font-size-xl: 1.25em;
+$font-size-2xl: 1.5em;
+$font-size-3xl: 1.75em;
+$font-size-4xl: 2em;
+$font-size-5xl: 2.25em;
+$font-size-6xl: 2.5em;
+$font-size-7xl: 2.75em;
+$font-size-8xl: 3em;
+$font-size-9xl: 3.25em;
+$font-size-10xl: 3.5em;
+$font-size-11xl: 3.75em;
+$font-size-12xl: 4em;
+$font-size-16xl: 5em;
+$font-size-20xl: 6em;
+$font-size-24xl: 7em;
+
+html {
+  font-family: $font-stack;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.5;
+  @include breakpoint("md") {
+    font-size: 100%;
+  }
+  @include breakpoint("lg") {
+    font-size: 112.5%;
+  }
+  @include breakpoint("xl") {
+    font-size: 125%;
+  }
+  @include breakpoint("2x") {
+    font-size: 137.5%;
+  }
+}
+
+p {
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+/*-------------------------------
+Headers
+-------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $header-color;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0 0 0.5rem;
+}
+h1,
+.h1 {
+  font-size: $header-size-1;
+}
+h2,
+.h2 {
+  font-size: $header-size-2;
+}
+h3,
+.h3 {
+  font-size: $header-size-3;
+}
+h4,
+.h4 {
+  font-size: $header-size-4;
+}
+h5,
+.h5 {
+  font-size: $header-size-5;
+}
+h6,
+.h6 {
+  font-size: $header-size-6;
+}
+
+/*-------------------------------
+Headlines
+-------------------------------*/
+/// Default Styles
+.headline-1,
+.headline-2,
+.headline-3,
+.headline-4,
+.headline-5 {
+  font-weight: 600;
+  font-family: $font-stack;
+  // letter-spacing: -0.015em;
+  line-height: 1;
+}
+
+/// Sizes (same as headers, but bumped up on large devices)
+.headline-1 {
+  font-size: $header-size-1;
+
+  @include breakpoint("xl") {
+    font-size: $header-size-1 * $type-scale;
+  }
+}
+.headline-2 {
+  font-size: $header-size-2;
+
+  @include breakpoint("xl") {
+    font-size: $header-size-2 * $type-scale;
+  }
+}
+.headline-3 {
+  font-size: $header-size-3;
+
+  @include breakpoint("xl") {
+    font-size: $header-size-3 * $type-scale;
+  }
+}
+.headline-4 {
+  font-size: $header-size-4;
+
+  @include breakpoint("xl") {
+    font-size: $header-size-4 * $type-scale;
+  }
+}
+.headline-5 {
+  font-size: $header-size-5;
+
+  @include breakpoint("xl") {
+    font-size: $header-size-5 * $type-scale;
+  }
+}
+
+
+/*-------------------------------
+Links
+-------------------------------*/
+/// Hyperlinks
+a{
+  color: $link-color;
+  &:hover{
+    color: $link-color-hover;}
+  }
+
+/// Button
+.btn {
+  align-items: center;
+  border: 0.1875rem solid transparent;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.07em;
+  padding: 0.5em 1.5em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+  /// Breakpoint Font Sizes
+  /// -Keeps button text a bit smaller than root font size
+  @include breakpoint('lg') {
+    font-size: 0.9rem;
+  }
+  @include breakpoint('xl') {
+    font-size: 0.875rem;
+  }
+}
+
+
+/*-------------------------------
+Type
+-------------------------------*/
+.highlight {
+  font-weight: 600;
+  color: $teal-900;
+  background: $teal-200;
+  padding: 5px;}

@@ -1,0 +1,38 @@
+/*-------------------------------
+Breakpoints
+-------------------------------*/
+/// Map of breakpoints used for media queries
+$breakpoints: (
+  // all devices
+  "default": 0,
+  // wearables, small phones and up
+  "nano": 250px,
+  // larger phones and up
+  "xs": 400px,
+  // landscape phones and up
+  "sm": 640px,
+  // portrait tablets and up
+  "md": 768px,
+  // landscape tablets, laptops and up
+  "lg": 1024px,
+  // desktops and up
+  "xl": 1280px,
+  // large desktops and up
+  "2x": 1536px,
+  // ultra devices
+  "3x": 1792px,
+);
+
+/// Map of padding values for each breakpoint
+/// -Used with "container-fluid" class to pad content
+$fluid-padding: (
+  "default": 0.75rem,
+  "nano": 1rem,
+  "xs": 1rem,
+  "sm": 1.5rem,
+  "md": 1.778rem, // based on 112.5% font
+  "lg": 2.4rem, // based on 125% font
+  "xl": 2.909rem, // based on 137.5% font
+  "2x": 2.667rem, // based on 150% font
+  "3x": 2.667rem, // based on 150% font
+);
