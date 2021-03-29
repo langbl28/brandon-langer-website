@@ -1,16 +1,31 @@
 import React from "react"
+import { Helmet } from "react-helmet"
+
+class Application extends React.Component {
+  render() {
+    return (
+      <div className="application">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>UX Portolio | Brandon Langer</title>
+          <link rel="canonical" href="http://brandonlanger.website" />
+        </Helmet>
+      </div>
+    )
+  }
+}
 
 export default function Home() {
   return (
     <section>
-      <div class="container">
+      <div className="container">
         <h1>Header 1</h1>
         <h2>Header 2</h2>
         <h3>Header 3</h3>
         <h4>Header 4</h4>
         <h5>Header 5</h5>
         <h6>Header 6</h6>
-        <p class="container-ch">
+        <p className="container-ch">
           Responsibilities included: writing technical reports and other
           documentation, such as handbooks and bulletins, for use by engineering
           staff, management, and customers, analyzing project requests and
@@ -22,7 +37,7 @@ export default function Home() {
           <a href="/">Link Text</a>
         </p>
         <p>
-          <span class="highlight">Highlighted Text</span>
+          <span className="highlight">Highlighted Text</span>
         </p>
         <ul>
           <li>List 1</li>
