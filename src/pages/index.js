@@ -1,14 +1,10 @@
-import React from "react";
-import {Helmet} from 'react-helmet'
-<Helmet>
-        <html lang='en' />
-        <title>Hello Suprabha!</title>
-        <meta name='description' content='Suprabha Blog!' />
-</Helmet>
+import React from "react"
+import SEO from "../components/seo"
 
 export default function Home() {
   return (
     <section>
+      <SEO title="UX/UI Portfolio" />
       <div className="container">
         <h1>Header 1</h1>
         <h2>Header 2</h2>
