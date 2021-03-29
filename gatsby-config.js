@@ -4,9 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-module.exports = {
-  plugins: [
-    `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-sass'
-  ]
+ module.exports = {
+  siteMetadata: {
+      title: 'Gaatsby Workshop',
+      description: 'Learn Gatsby From scratch'
+  },
+  plugins: ['gatsby-plugin-sass', 'gatsby-plugin-react-helmet']
 }

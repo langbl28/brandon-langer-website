@@ -1,19 +1,10 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-
-class Application extends React.Component {
-  render() {
-    return (
-      <div className="application">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>UX Portolio | Brandon Langer</title>
-          <link rel="canonical" href="http://brandonlanger.website" />
-        </Helmet>
-      </div>
-    )
-  }
-}
+import React from "react";
+import {Helmet} from 'react-helmet'
+<Helmet>
+        <html lang='en' />
+        <title>Hello Suprabha!</title>
+        <meta name='description' content='Suprabha Blog!' />
+</Helmet>
 
 export default function Home() {
   return (
