@@ -19,7 +19,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sass",
-    "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -44,10 +43,17 @@ module.exports = {
         description: `Creating empathic designs through modern UX/UI.`,
         lang: `en`,
         display: `standalone`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `#fff`,
+        theme_color: `#000`,
         display: `standalone`,
         icon: `src/images/icon.svg`, // This path is relative to the root of the site.
+      },
+    },
+    "gatsby-plugin-offline",
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/` , `/about/`],
       },
     },
   ],

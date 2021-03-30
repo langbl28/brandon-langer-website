@@ -21,7 +21,7 @@ export default function Home() {
           product.
         </p>
         <p>
-          <a href="/">Link Text</a>
+          <a href="/about">Link Text</a>
         </p>
         <p>
           <span className="highlight">Highlighted Text</span>
@@ -42,6 +42,38 @@ export default function Home() {
             </ul>
           </li>
         </ol>
+      </div>
+      <div className="container">
+        <div class="row">
+          <div class="col-6">
+            <p>
+              Responsibilities included: writing technical reports and other
+              documentation.
+            </p>
+          </div>
+          <div class="col-6">
+            <p>
+              Responsibilities included: writing technical reports and other
+              documentation.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid">
+        <div class="row">
+          <div class="col-6">
+            <p>
+              Responsibilities included: writing technical reports and other
+              documentation.
+            </p>
+          </div>
+          <div class="col-6">
+            <p>
+              Responsibilities included: writing technical reports and other
+              documentation.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   )

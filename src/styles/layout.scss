@@ -2,132 +2,138 @@
 Containers / Wrappers
 -------------------------------*/
 /// Wrapper is same as container, but with padding on ALL sides
-.container,
-.container-fluid,
-.wrapper,
-.wrapper-fluid {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: map-get($fluid-padding, "default");
-  padding-right: map-get($fluid-padding, "default");
-  width: 100%;
-}
-.wrapper,
-.wrapper-fluid {
-  padding-bottom: map-get($fluid-padding, "default");
-  padding-top: map-get($fluid-padding, "default");
-}
-
-@include breakpoint('nano') {
-  .container-fluid,
-  .wrapper-fluid {
-    padding-left: map-get($fluid-padding, "nano");
-    padding-right: map-get($fluid-padding, "nano");
-  }
-  .wrapper-fluid {
-    padding-bottom: map-get($fluid-padding, "nano");
-    padding-top: map-get($fluid-padding, "nano");
-  }
-}
-
-@include breakpoint('xs') {
-  .container-fluid,
-  .wrapper-fluid {
-    padding-left: map-get($fluid-padding, "xs");
-    padding-right: map-get($fluid-padding, "xs");
-  }
-  .wrapper-fluid {
-    padding-bottom: map-get($fluid-padding, "xs");
-    padding-top: map-get($fluid-padding, "xs");
-  }
-}
-
-@include breakpoint('sm') {
+body{
+  margin: 0;}
   .container,
-  .wrapper {
-    max-width: map-get($breakpoints, "sm");
-  }
   .container-fluid,
+  .wrapper,
   .wrapper-fluid {
-    padding-left: map-get($fluid-padding, "sm");
-    padding-right: map-get($fluid-padding, "sm");
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    width: 100%;
   }
+  
+  .wrapper,
   .wrapper-fluid {
-    padding-bottom: map-get($fluid-padding, "sm");
-    padding-top: map-get($fluid-padding, "sm");
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
   }
-}
-
-@include breakpoint('md') {
-  .container,
-  .wrapper {
-    max-width: map-get($breakpoints, "md");
+  
+  @media (min-width: 250px) {
+    .container,
+    .container-fluid,
+    .wrapper,
+    .wrapper-fluid {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .wrapper,
+    .wrapper-fluid {
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
   }
-  .container-fluid,
-  .wrapper-fluid {
-    padding-left: map-get($fluid-padding, "md");
-    padding-right: map-get($fluid-padding, "md");
+  
+  @media (min-width: 400px) {
+    .container-fluid,
+    .wrapper-fluid {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .wrapper-fluid {
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
   }
-  .wrapper-fluid {
-    padding-bottom: map-get($fluid-padding, "md");
-    padding-top: map-get($fluid-padding, "md");
+  
+  @media (min-width: 640px) {
+    .container,
+    .wrapper {
+      max-width: 610px;
+    }
+    .container-fluid,
+    .wrapper-fluid {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    .wrapper-fluid {
+      padding-bottom: 1.5rem;
+      padding-top: 1.5rem;
+    }
   }
-}
-
-@include breakpoint('lg') {
-  .container,
-  .wrapper {
-    max-width: map-get($breakpoints, "lg");
+  
+  @media (min-width: 768px) {
+    .container,
+    .wrapper {
+      max-width: 640px;
+    }
+    .container-fluid,
+    .wrapper-fluid {
+      padding-left: 1.778rem;
+      padding-right: 1.778rem;
+    }
+    .wrapper-fluid {
+      padding-bottom: 1.778rem;
+      padding-top: 1.778rem;
+    }
   }
-  .container-fluid,
-  .wrapper-fluid {
-    padding-left: map-get($fluid-padding, "lg");
-    padding-right: map-get($fluid-padding, "lg");
+  
+  @media (min-width: 1024px) {
+    .container,
+    .wrapper {
+      max-width: 768px;
+    }
+    .container-fluid,
+    .wrapper-fluid {
+      padding-left: 2.4rem;
+      padding-right: 2.4rem;
+    }
+    .wrapper-fluid {
+      padding-bottom: 2.4rem;
+      padding-top: 2.4rem;
+    }
   }
-  .wrapper-fluid {
-    padding-bottom: map-get($fluid-padding, "lg");
-    padding-top: map-get($fluid-padding, "lg");
+  
+  @media (min-width: 1280px) {
+    .container,
+    .wrapper {
+      max-width: 1024px;
+    }
+    .container-fluid,
+    .wrapper-fluid {
+      padding-left: 2.909rem;
+      padding-right: 2.909rem;
+    }
+    .wrapper-fluid {
+      padding-bottom: 2.909rem;
+      padding-top: 2.909rem;
+    }
   }
-}
-
-@include breakpoint('xl') {
-  .container,
-  .wrapper {
-    max-width: map-get($breakpoints, "xl");
+  
+  @media (min-width: 1536px) {
+    .container,
+    .wrapper {
+      max-width: 1280px;
+    }
+    .container-fluid,
+    .wrapper-fluid {
+      padding-left: 2.667rem;
+      padding-right: 2.667rem;
+    }
+    .wrapper-fluid {
+      padding-bottom: 2.667rem;
+      padding-top: 2.667rem;
+    }
   }
-  .container-fluid,
-  .wrapper-fluid {
-    padding-left: map-get($fluid-padding, "xl");
-    padding-right: map-get($fluid-padding, "xl");
+  
+  @media (min-width: 1792px) {
+    .container,
+    .wrapper {
+      max-width: 1280px;
+    }
   }
-  .wrapper-fluid {
-    padding-bottom: map-get($fluid-padding, "xl");
-    padding-top: map-get($fluid-padding, "xl");
-  }
-}
-
-@include breakpoint('2x') {
-  .container,
-  .wrapper {
-    max-width: map-get($breakpoints, "2x");
-  }
-  .container-fluid,
-  .wrapper-fluid {
-    padding-left: map-get($fluid-padding, "2x");
-    padding-right: map-get($fluid-padding, "2x");
-  }
-  .wrapper-fluid {
-    padding-bottom: map-get($fluid-padding, "2x");
-    padding-top: map-get($fluid-padding, "2x");
-  }
-}
-
-@include breakpoint('3x') {
-  .container,
-  .wrapper {
-    max-width: map-get($breakpoints, "3x");
-  }
-}
 
 /// Character containers
 /// -Limits width to an amount of characters to improve readability
