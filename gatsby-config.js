@@ -20,15 +20,6 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sass",
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
-      },
-    },
-    "gatsby-transformer-sharp", 
-    "gatsby-plugin-sharp",
-    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://brandonlanger.website",
