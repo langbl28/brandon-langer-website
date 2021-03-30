@@ -19,6 +19,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sass",
+    "gatsby-plugin-manifest",
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -48,7 +49,7 @@ module.exports = {
         display: `standalone`,
         icon: `src/images/icon.svg`, // This path is relative to the root of the site.
         icon_options: {
-          purpose: `any`,
+          purpose: `maskable any`,
         },
       },
     },
