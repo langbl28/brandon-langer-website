@@ -47,6 +47,9 @@ module.exports = {
         theme_color: `#000`,
         display: `standalone`,
         icon: `src/images/icon.svg`, // This path is relative to the root of the site.
+        icon_options: {
+          purpose: `maskable`,
+        },
       },
     },
     "gatsby-plugin-offline",
