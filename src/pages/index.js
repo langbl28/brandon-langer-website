@@ -1,76 +1,42 @@
 import React from "react"
 import SEO from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Home() {
   return (
     <section>
       <SEO title="UX/UI Portfolio" />
-      <div className="container">
-        <h1>Header 1</h1>
-        <h2>Header 2</h2>
-        <h3>Header 3</h3>
-        <h4>Header 4</h4>
-        <h5>Header 5</h5>
-        <h6>Header 6</h6>
-        <p className="container-ch">
-          Responsibilities included: writing technical reports and other
-          documentation, such as handbooks and bulletins, for use by engineering
-          staff, management, and customers, analyzing project requests and
-          proposals and engineering data to determine feasibility,
-          predictability, cost, and production time of aerospace or aeronautical
-          product.
-        </p>
-        <p>
-          <a href="/about">Link Text</a>
-        </p>
-        <p>
-          <span className="highlight">Highlighted Text</span>
-        </p>
-        <ul>
-          <li>List 1</li>
-          <li>List 2</li>
-          <li>List 3</li>
-        </ul>
-        <ol>
-          <li>List 1</li>
-          <li>List 2</li>
-          <li>
-            List 3
-            <ul>
-              <li>List A</li>
-              <li>List B</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-      <div className="container">
-        <div class="row">
-          <div class="col-6">
-            <p>
-              Responsibilities included: writing technical reports and other
-              documentation.
-            </p>
+      <div className="container mt-5">
+        <div className="row">
+          <div className="col-12 col-sm-6">
+            <StaticImage
+              //src="../images/dog.jpg"
+              src="https://images.pexels.com/photos/4588435/pexels-photo-4588435.jpeg"
+              aspectRatio={1 / 1}
+              alt="a dog"
+              className="hidden-sm mb-5"
+            />
+            <StaticImage
+              src="https://images.pexels.com/photos/4588435/pexels-photo-4588435.jpeg"
+              alt="a dog"
+              className="hidden-sm-down"
+            />
           </div>
-          <div class="col-6">
+          <div className="col-12 col-sm-6 align-self-center">
+            <h1 className="mb-5">Hey! I'm Brandon Langer.</h1>
+            <h2 className="h5 mb-8">UX/UI designer</h2>
             <p>
-              Responsibilities included: writing technical reports and other
-              documentation.
+              I’m a UI and UX designer based in Green Bay, Wisconsin. I'm
+              passionate about creating empathic digital experiences. For me,
+              it's all about connecting with users in a meaningful way.
             </p>
-          </div>
-        </div>
-      </div>
-      <div className="container-fluid">
-        <div class="row">
-          <div class="col-6">
-            <p>
-              Responsibilities included: writing technical reports and other
-              documentation.
-            </p>
-          </div>
-          <div class="col-6">
-            <p>
-              Responsibilities included: writing technical reports and other
-              documentation.
+            <p className="mt-8">
+              <a class="btn mr-3" href="#">
+                Resume
+              </a>
+              <a class="btn" href="#">
+                Contact
+              </a>
             </p>
           </div>
         </div>

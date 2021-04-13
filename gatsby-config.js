@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
@@ -17,8 +18,18 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sass",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-image",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
