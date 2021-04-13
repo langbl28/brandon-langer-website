@@ -2,8 +2,8 @@
 Typography
 -------------------------------*/
 /// Fonts
-$font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+$font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 /// Font Colors
@@ -170,16 +170,16 @@ Headlines
   }
 }
 
-
 /*-------------------------------
 Links
 -------------------------------*/
 /// Hyperlinks
-a{
+a {
   color: $link-color;
-  &:hover{
-    color: $link-color-hover;}
+  &:hover {
+    color: $link-color-hover;
   }
+}
 
 /// Button
 .btn {
@@ -209,14 +209,13 @@ a{
 
   /// Breakpoint Font Sizes
   /// -Keeps button text a bit smaller than root font size
-  @include breakpoint('lg') {
+  @include breakpoint("lg") {
     font-size: 0.9rem;
   }
-  @include breakpoint('xl') {
+  @include breakpoint("xl") {
     font-size: 0.875rem;
   }
 }
-
 
 /*-------------------------------
 Type
@@ -225,4 +224,26 @@ Type
   font-weight: 600;
   color: $teal-900;
   background: $teal-200;
-  padding: 5px;}
+  padding: 5px;
+}
+
+.btn {
+  padding: 6px 20px;
+  font-size: 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid $teal-900;
+  color: $teal-900;
+  transition-duration: 0.2s;
+
+  svg {
+    fill: $teal-900;
+    width: 0.75rem;
+  }
+}
+.btn:hover {
+  color: white;
+  background-color: $teal-900;
+  svg {
+    fill: white;
+  }
+}
