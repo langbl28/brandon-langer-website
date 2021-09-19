@@ -23,8 +23,8 @@ export default function Home() {
             />
           </div>
           <div className="col-12 col-sm-6 align-self-center">
-            <h1 className="mb-5">Hey! I'm Brandon Langer.</h1>
-            <h2 className="h5 mb-8">UX/UI designer</h2>
+            <h1 className="mb-5">Green Bay Print Shop</h1>
+            <h2 className="h5 mb-8">Creating Shirts</h2>
             <p>
               I’m a UI and UX designer based in Green Bay, Wisconsin. I'm
               passionate about creating empathic digital experiences. For me,
